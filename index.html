@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pomodoro-container">
+        <h1>Cronômetro Pomodoro</h1>
+
+        <!-- Círculo de progresso -->
+        <div class="circle-container">
+            <svg class="circle" width="150" height="150">
+                <circle class="background-circle" cx="75" cy="75" r="70" stroke="#ddd" stroke-width="10" fill="none" />
+                <circle class="progress-circle" cx="75" cy="75" r="70" stroke="#4CAF50" stroke-width="10" fill="none" stroke-dasharray="440" stroke-dashoffset="440"/>
+            </svg>
+            <div id="timer-display">25:00</div>
+        </div>
+
+        <div id="status">Ciclo: Trabalhando</div>
+        <div id="cycle-count">Ciclos completos: 0</div>
+
+        <div class="controls">
+            <button id="start-btn">Iniciar</button>
+            <button id="pause-btn" disabled>Pause</button>
+            <button id="reset-btn">Reiniciar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
